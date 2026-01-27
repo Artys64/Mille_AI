@@ -57,7 +57,7 @@ Design	Tailwind + Shadcn	Interface "Industrial-Dark" focada em produtividade e f
 
 📅 Roadmap de Evolução
 
-    [x] Fase 1: Engine de Redação (The Auditor - Strict Mode).
+    [] Fase 1: Engine de Redação (The Auditor - Strict Mode).
 
     [ ] Fase 2: Diagnóstico de Exatas e Natureza via OCR de rascunhos.
 
