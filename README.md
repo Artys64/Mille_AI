@@ -6,7 +6,7 @@ O Mille AI não é apenas uma plataforma de estudos; é um ecossistema de audito
 🏛️ Os 3 Pilares da Disrupção
 1. The Auditor (Correção de Elite)
 
-Esqueça feedbacks genéricos. Nossa engine, alimentada pelo Gemini 2.0 Flash, atua como um corretor veterano de banca em "Strict Mode".
+Esqueça feedbacks genéricos. Nossa engine, alimentada pelo Gemini 2.5 Flash, atua como um corretor veterano de banca em "Strict Mode".
 
     Redação: Auditoria técnica das 5 competências do ENEM sem arredondamentos amigáveis.
 
