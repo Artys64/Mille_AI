@@ -20,14 +20,14 @@ Criar o motor de correção de redação mais rigoroso do mercado, com:
 
 ```
 [Input]          [Server Action]       [Intelligence]        [Persistence]      [Output]
-Textarea  -->  app/actions/audit.ts --> Gemini 1.5 Flash --> Supabase DB  -->  Dashboard
+Textarea  -->  app/actions/audit.ts --> Gemini 2.5 Flash --> Supabase DB  -->  Dashboard
                                          (JSON Mode)          (corrections)     (Radar Chart)
 ```
 
 **Fluxo de Dados (Next.js Server Actions):**
 1. **Input:** Aluno envia texto via `<textarea>`
 2. **Server Action:** Backend recebe texto, injeta System Prompt "Carrasco"
-3. **Intelligence:** Envio para Gemini 1.5 Flash com `responseMimeType: "application/json"`
+3. **Intelligence:** Envio para Gemini 2.5 Flash com `responseMimeType: "application/json"`
 4. **Persistence:** JSON salvo na tabela `corrections` (Supabase)
 5. **Output:** Frontend renderiza nota e gráfico de radar
 
@@ -72,7 +72,7 @@ src/
 |--------|------------|--------|
 | Framework | Next.js | 16.1.5 |
 | Runtime | React | 19.2.3 |
-| Engine de IA | Gemini 1.5 Flash | via @google/generative-ai |
+| Engine de IA | Gemini 2.5 Flash | via @google/generative-ai |
 | Backend/DB | Supabase | @supabase/ssr 0.8.0 |
 | Styling | Tailwind CSS | 4.x |
 | UI Components | shadcn/ui | custom |
@@ -236,7 +236,7 @@ export async function auditEssay(formData: FormData) {
 
   // 3. Setup Gemini (Flash para velocidade)
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.5-flash-preview-05-20",
     generationConfig: { responseMimeType: "application/json" }
   })
 
@@ -391,7 +391,7 @@ npx tsc --noEmit
 
 ## Notas Importantes
 
-1. **Modelo de IA:** Usar `gemini-1.5-flash` (não `gemini-2.5`, ainda não público)
+1. **Modelo de IA:** Usar `gemini-2.5-flash-preview-05-20` para o MVP
 2. **JSON Mode:** Sempre usar `responseMimeType: "application/json"` para respostas estruturadas
 3. **RLS:** Row Level Security está ativo - usuários só veem suas próprias correções
 4. **Validação:** Mínimo de 7 linhas para evitar correções de textos incompletos
