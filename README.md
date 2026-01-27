@@ -43,7 +43,7 @@ Onde:
 
 🛠️ Stack Tecnológica (MVP)
 Camada	Tecnologia	Motivo
-Engine de IA	Gemini 2.0 Flash	Latência quase zero e processamento de contexto gratuito e robusto.
+Engine de IA	Gemini 2.5 Flash	Latência quase zero e processamento de contexto gratuito e robusto.
 Framework	Next.js 14	Performance de carregamento e facilidade de escala.
 Backend/DB	Supabase	Gerenciamento de dados em tempo real e autenticação segura.
 Design	Tailwind + Shadcn	Interface "Industrial-Dark" focada em produtividade e foco.
