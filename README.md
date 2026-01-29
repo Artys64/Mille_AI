@@ -12,13 +12,12 @@ Esqueça feedbacks genéricos. Nossa engine, alimentada pelo Gemini 2.5 Flash, a
 
     STEM (Exatas & Natureza): Identificação de falhas conceituais no processo de resolução, separando o erro de cálculo da falta de base teórica.
 
-2. Dynamic Roadmap (Cronograma em Tempo Real)
-
+2. Plano de estudos personalizados
 O cronograma fixo está morto. O Mille AI recalcula sua rota de estudos diariamente.
 
-    Pivot Imediato: Se você errou uma questão de Estequiometria às 14:00, seu cronograma das 15:00 é alterado automaticamente para cobrir essa lacuna.
+    O sistema terá um algoritmo que ele entende os seus padroes de erro, com base neles cria um plano de estudos personalizado.
 
-    Foco no TRI: Otimização da carga horária baseada no peso das matérias e na Teoria de Resposta ao Item.
+    O diferencial dessa funcionalidade é que o foco do app é aprendizado com base nos pontos fracos do indivíduo, em tal aspecto a maioria das plataformas educacionais falham.
 
 3. Surgical Education (Ensino Personalizado)
 
