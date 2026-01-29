@@ -64,3 +64,5 @@ Design	Tailwind + Shadcn	Interface "Industrial-Dark" focada em produtividade e f
     [ ] Fase 3: Algoritmo de Cronograma Adaptativo e Banco de Micro-Aulas.
 
     [ ] Fase 4: Simulados Preditivos baseados no TRI Real.
+
+    Mille AI — Porque no dia da prova, a sua única vantagem é ter sido auditado pela melhor tecnologia.
