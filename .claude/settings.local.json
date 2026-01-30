@@ -1,8 +1,33 @@
 {
   "permissions": {
     "allow": [
-      "mcp__serena__list_dir",
-      "WebSearch"
-    ]
-  }
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(source:*)",
+      "Bash(find:*)",
+      "Bash(mv:*)",
+      "Bash(mkdir:*)",
+      "Bash(tree:*)",
+      "Bash(ruff:*)",
+      "Bash(touch:*)",
+      "Bash(chmod:*)",
+      "Bash(cat:*)",
+      "Bash(ruff check:*)",
+      "Bash(pytest:*)",
+      "Bash(python:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(python3 -m pytest:*)",
+      "WebFetch(domain:*)",
+      "Bash(gh issue view:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "mcp__serena",
+      "mcp__archon",
+      "mcp__supabase"
+    ],
+    "deny": []
+  },
+  "enabledMcpjsonServers": [
+    "supabase"
+  ],
+  "enableAllProjectMcpServers": true
 }
