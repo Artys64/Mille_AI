@@ -30,7 +30,7 @@ Retorne APENAS um JSON válido. Sem markdown, sem texto antes ou depois.
 
 REGRAS:
 1. NUNCA elogie.
-2. Se o texto for curto demais (<7 linhas), dê nota 0.
+2. Se o texto for curto demais (<100 palavras), dê nota 0.
 3. Use terminologia técnica (ex: 'Truncamento', 'Quebra de Paralelismo', 'Repertório Improdutivo').
 4. Notas válidas por competência: 0, 40, 80, 120, 160, 200.
 5. Repertório só é produtivo se estiver INTEGRADO ao argumento.`
@@ -69,14 +69,16 @@ export async function auditEssay(formData: FormData): Promise<AuditResponse> {
   }
 
   // 2. Validação de texto mínimo
-  const lines = essayText.trim().split('\n').filter(l => l.trim()).length
-  if (lines < 7) {
-    return { success: false, error: "Texto muito curto. Mínimo de 7 linhas para uma análise válida." }
+  const wordCount = essayText.split(/\s+/).filter(w => w.length > 0).length
+  const charCount = essayText.length
+
+  if (wordCount < 100 || charCount < 500) {
+    return { success: false, error: "Texto muito curto. É necessário pelo menos 100 palavras para uma análise válida." }
   }
 
   // 3. Setup Gemini (2.5 Flash para velocidade)
   const model = genAI.getGenerativeModel({
-    model: "gemini-2.5-flash-preview-05-20",
+    model: "gemini-2.5-flash",
     generationConfig: {
       ...strictModeConfig,
       responseMimeType: "application/json"

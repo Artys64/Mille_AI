@@ -4,7 +4,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!)
 
 // Gemini 2.5 Flash - optimized for low latency
 export const geminiFlash = genAI.getGenerativeModel({
-  model: "gemini-2.5-flash-preview-05-20",
+  model: "gemini-2.5-flash",
 })
 
 // Configuration for strict grading mode (The Auditor)
